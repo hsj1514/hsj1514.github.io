@@ -8,4 +8,4 @@ seungju Ham
 
 ### More Information
 
-A person who study programming.
+A person who study coding.
