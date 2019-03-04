@@ -146,3 +146,29 @@ var app = angular.module('App', ['ngRoute']);
         $scope.developer ="seungju";
      });
 ```
+
+
+
+"app.css"
+```
+.event_a {
+    color : skyblue;
+    font-size : 20px;
+    text-decoration : none; 
+}
+
+
+.event_a:hover {
+    opacity : 0.7;
+}
+
+
+.event_li {
+    list-style-type : none;
+}
+
+
+.subject {
+    color : #7c7979;
+}
+```
