@@ -170,3 +170,7 @@ var app = angular.module('App', ['ngRoute']);
     color : #7c7979;
 }
 ```
+
+
+출력된 웹페이지
+<img src="../images/angularjs1.png"  />
