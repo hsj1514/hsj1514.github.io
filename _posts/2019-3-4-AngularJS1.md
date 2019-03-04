@@ -8,7 +8,7 @@ angularJS 공부하기 좋은 사이트를 찾아냈다.
 https://www.guru99.com/angularjs-introduction.html
 
 사이트 1강~11강까지의 학습내용을 정리하여 하나의 웹페이지로 만들어봤다. ng-repeat, route, ng-init, filter의 개념 위주로 공부했다. 간단한 예제들이어서 저번 주에 읽은 angularJS책 내용을 복습하기 좋았다.
-&nbsp
+
 
 
 "index.html"
@@ -79,6 +79,7 @@ https://www.guru99.com/angularjs-introduction.html
 
 </html>
 ```
+
 
 
 "app.js"
