@@ -57,32 +57,6 @@ API 링크 : https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&sym
 var app = angular.module('App', ['ngRoute']);
 
 
-app.controller('dataList', function($scope){
-  $scope.items = [
-    {'title' : 'What is Directive?',
-    'content' : '특정한 행위의 기능을 가진 DOM엘리먼트.'},
-    
-    {'title' : 'Custom Directive',
-    'content' : '디렉티브를 직접 생성해보십시오.'},
-    
-    {'title' : 'Bye~',
-    'content' : '디렉티브 이야기를 마치겠습니다.'}
-  ]
-});
-
-
-app.controller('CityCtrl', ['$log', '$scope', '$http', function ($log, $scope, $http) {
-  $http.get('/data/country.json')
-  .success(function (data) {
-    $scope.addresses = data;
-    $log.info('Adresslist:', $scope.addresses.addressList);
-  })
-  .error(function (data, status) {
-    $log.error('Status:', status);
-  });
-}]);
-
-
 app.controller('customersCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo")
   .success(function (response){
