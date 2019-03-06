@@ -95,4 +95,4 @@ app.controller('customersCtrl', ['$scope', '$http', function($scope, $http) {
 
 
 출력된 웹페이지
-<img src="../images/stock.png"  />
+<img src="../images/stock2.png"  />
