@@ -4,7 +4,7 @@ title: AngularJS 3
 ---
 
 
-AngularJS 2 에서 ng-if 를 이용하여 5분봉이 양봉인지 음봉인지 판단해봤다.
+AngularJS 2 예제에서 ng-if 를 추가하여 5분봉이 양봉인지 음봉인지 판단해봤다.
 
 
 API 링크 : https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo
