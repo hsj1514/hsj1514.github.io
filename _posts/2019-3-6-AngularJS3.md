@@ -1,11 +1,10 @@
 ---
 layout: post
-title: AngularJS 2
+title: AngularJS 3
 ---
 
 
-$http 이용하여 외부 API 정보 가져와서 가공하는 연습을 해봤다.
-연습에 이용한 API는 2019/3/4 마이크로소프트 주가 데이터.
+AngularJS 2 에서 ng-if 를 이용하여 5분봉이 양봉인지 음봉인지 판단해봤다.
 
 
 API 링크 : https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo
@@ -30,7 +29,7 @@ API 링크 : https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&sym
 
   <div ng-controller="customersCtrl">
     <ul ng-repeat="data in stockdatas">
-      <li>
+      <li style="display : flex; flex-direction : left;">
         open : {{data['1. open'] | number : 3}}
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         close : {{data['4. close'] | number : 3}}
@@ -41,6 +40,19 @@ API 링크 : https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&sym
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         (close - open) : {{data['4. close'] - data['1. open'] | number : 4}}
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div ng-if="upfinder(data['4. close'] - data['1. open'])">
+          <div>
+            up
+          </div>
+        </div>
+
+        <div ng-if="downfinder(data['4. close'] - data['1. open'])">
+          <div>
+            down
+          </div>
+        </div>
+
       </li>
     </ul>
   </div>
@@ -60,7 +72,21 @@ var app = angular.module('App', ['ngRoute']);
 app.controller('customersCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo")
   .success(function (response){
+
     $scope.stockdatas = response['Time Series (5min)'];
+
+    $scope.upfinder = function(number){
+      if(number > 0){
+        return true
+      }
+    }
+
+    $scope.downfinder = function(number){
+      if(number < 0){
+        return true
+      }
+    }
+
   });
 }]);
 ```
@@ -69,4 +95,4 @@ app.controller('customersCtrl', ['$scope', '$http', function($scope, $http) {
 
 
 출력된 웹페이지
-<img src="../images/stock2.png"  />
+<img src="../images/stock.png"  />
