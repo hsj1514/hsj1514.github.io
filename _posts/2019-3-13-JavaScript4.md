@@ -14,7 +14,24 @@ var list = [1,2,3,4,5];
 var result = list.map(function(v){
     return v * 2;
 });
+
+console.log(result);
 ```
+
+
+
+아래의 예제와 같이 forEach에서는 undeined가 출력되는걸 볼 수 있다.
+
+```
+// undefined
+var array = [1,2,3,4,5];
+var a = array.forEach(function(v){
+    return v * 2;
+});
+
+console.log(a);
+```
+
 
 
 javascript를 공부한지 얼마 안됐을 때에는 모르는게 많아서 아래의 코드처럼 while만으로 모든 상황을 다 해결하려고 했었다.
@@ -28,4 +45,6 @@ while(i < list.length){
   res.push(list[i] * 2)
   i = i + 1;
 }
+
+console.log(res)
 ```
