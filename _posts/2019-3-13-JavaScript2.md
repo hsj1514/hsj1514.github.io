@@ -3,8 +3,8 @@ layout: post
 title: JavaScript 2 - concat
 ---
 
-Make This Work
-duplicate([1, 2, 3, 4, 5]); // [1,2,3,4,5,1,2,3,4,5]
+<Make This Work :
+duplicate([1, 2, 3, 4, 5]); // [1,2,3,4,5,1,2,3,4,5]>
 
 
 concat을 안 쓰고 만들어봤다.
