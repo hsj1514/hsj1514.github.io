@@ -5,6 +5,7 @@ title: JavaScript 3 - ('==' 그리고 '===')
 
 
 그동안 귀찮아서 '=='표현과 '===' 표현의 차이 공부를 미루고 있었는데 이번 기회에 한번 알아봤다. 
+
 ```
 function show(a){
   console.log(a)
