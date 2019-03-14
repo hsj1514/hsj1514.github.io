@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript 5 - scope와 hoisting
+title: JavaScript 5 - var, let 그리고 const
 ---
 
 var, let 그리고 const의 차이에 대해 추상적으로만 알고있었는데 이번 기회에 연습해보면서 정확히 정리했다.
@@ -21,16 +21,15 @@ function testfunc(){
   if(true){
     var test1 = "peach"
     let test2 = "banana"
-    console.log(test1) // peach
+    console.log(test1) // "peach"
   }
-  console.log(test1) // peach
-  console.log(test2) // test2 is not defined
+  console.log(test1) // "peach"
+  console.log(test2) // "test2 is not defined"
 }
 
 testfunc()
 
-console.log(test1) // apple
-2019
+console.log(test1) // "apple"
 ```
 
 
@@ -50,7 +49,7 @@ test1() // "test1"
 
 함수 hoisting 연습 2
 ```
-test2() // test2 is not a function
+test2() // "test2 is not a function"
 
 var test2 = function(){
   console.log("test2")
